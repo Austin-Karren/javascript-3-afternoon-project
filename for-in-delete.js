@@ -83,8 +83,6 @@ const double = (obj) => {
   return obj;
 }
 
-
-
 ////////// PROBLEM 4 //////////
 
 /*
