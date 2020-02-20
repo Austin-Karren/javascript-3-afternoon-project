@@ -54,7 +54,11 @@ function greeting( obj ) {
   Sum up the values and return the total number.
 */
 
-//Code Here
+let totalPopulation = (obj) => {
+  const {utah, california, texas, arizona} = obj;
+
+  return utah + california + texas + arizona;
+}
 
 
 
@@ -68,7 +72,12 @@ function greeting( obj ) {
   Push these new variables to an array and return the array. 
 */
 
-//Code Here
+const ingredients = (obj) => {
+  const {carb, fat, protein} = obj;
+  let arr = [];
+  arr.push(carb, fat, protein)
+  return arr;
+}
 
 
 
@@ -86,7 +95,11 @@ function greeting( obj ) {
   Find the smallest number of the three and return that number.
 */
 
-//Code Here
+const largeNumbers = ({first, second, third}) => {
+  let arr = [];
+  arr.push(first, second, third);
+  return Math.min(...arr);
+}
 
 
 
@@ -98,6 +111,18 @@ function greeting( obj ) {
   Find the longest array and return that array.
 */
 
-//Code Here
+const numberGroups = ({a, b, c}) => {
+  let sizeA = a.length;
+  let sizeB = b.length;
+  let sizeC = c.length;
+  let winner = Math.max(sizeA, sizeB, sizeC);
+  if(winner === sizeA){
+    return a;
+  } else if(winner === sizeB){
+    return b;
+  } else {
+    return c;
+  }
+}
 
 

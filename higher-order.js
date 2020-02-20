@@ -63,8 +63,9 @@ const populations = [8175133, 3792621, 2695598, 2100263];
   (runningTotal, curElement, curIndex, wholeArray)=>{} Arrow Form
 */
 
-//Code Here
-let totalPopulation //  = populations.reduce(/* Provide Your Callback Here */)
+// const reducer = (acc, curr) => acc + curr;
+
+let totalPopulation = populations.reduce((acc, curr) => acc + curr);
 
 
 
@@ -90,7 +91,13 @@ const monstersInYourPocket = [{"monster":"Bulbabunny","CP":156},{"monster":"Bulb
 */
 
 //Code Here
-let myStrongest // = monstersInYourPocket.filter(/* Provide Your Callback Here */)
+let myStrongest = monstersInYourPocket.filter(element => {
+  for(let key in element){
+    if(key === "CP" && element[key] > 200){
+      return element;
+    }
+  }
+})
 
 
 
