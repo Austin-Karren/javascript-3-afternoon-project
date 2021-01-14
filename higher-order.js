@@ -145,8 +145,11 @@ const purchases = [{"owner":"Barry","price":103},{"owner":"Bob","price":75},
 console.log(purchases[0]['price'])
 
 let bobsTotal = purchases.reduce((acc, curr) => {
-  acc += curr.filter(e => e['price']);
-  return acc;
-})
+  if(curr['owner'] === 'Bob'){
+    return acc + curr['price'];
+  } else {
+    return acc;
+  }
+}, 0)
 
 
